@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 
 app.use(cors({
-  origin: 'https://secret-keeper.surge.sh/',
+  origin: ['https://secret-keeper.surge.sh/', 'http://secret-keeper.surge.sh/', 'https://secret-keeper.surge.sh', 'http://secret-keeper.surge.sh', 'secret-keeper.surge.sh'],
 }))
 
 app.use('/secrets', require('./routes/secrets'));
