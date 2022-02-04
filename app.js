@@ -14,6 +14,8 @@ app.use(bodyParser.json());
 
 app.use(cors({
   origin: ['https://secret-keeper.surge.sh/', 'http://secret-keeper.surge.sh/', 'https://secret-keeper.surge.sh', 'http://secret-keeper.surge.sh', 'secret-keeper.surge.sh'],
+  methods: 'POST',
+  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
 }))
 
 app.use('/secrets', require('./routes/secrets'));
