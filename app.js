@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 
 app.use(cors({
-  allowedOrigins: [
+  origin: [
     'https://secret-keeper.surge.sh/',
   ]
 }))
